@@ -30,7 +30,7 @@ export class AppComponent {
   }
 
   loadQuestions() {
-    this.http.get<any[]>(`/${this.selectedTopic}.json`).subscribe(data => {
+    this.http.get<any[]>(`./${this.selectedTopic}.json`).subscribe(data => {
       data = this.shuffle(data);
       this.questions = data.map(q => ({
         ...q,
